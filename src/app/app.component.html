@@ -1,6 +1,6 @@
 <h1>{{ "Oi eu sou o Goku!" | toUppercase }}</h1>
 <h2>{{ dateNow }}</h2>
-<h2>{{ "12/08/2024" | date :"short":"" :"pt-PT" }}</h2>
+<h2>{{ "12/08/2024" | date :"short" }}</h2>
 
 <p>=======================================================</p>
 
@@ -19,3 +19,15 @@
 <app-home ></app-home>
 
 <p>{{title}}</p>
+
+<p>=======================================================</p>
+<h2>Exercicio slide 02 - pag 12</h2>
+<input type="number" [(ngModel)]="numero1">
+<input type="number" [(ngModel)]="numero2">
+<button (click)="calcular()">Calcular</button>
+<ul>
+  <li>Resultado da soma: {{resultSoma}}</li>
+  <li>Resultado da subtração: {{resultSub}}</li>
+  <li>Resultado da divisão: {{resultDiv}}</li>
+  <li>Resultado da multiplicação: {{resultMult}}</li>
+</ul>
