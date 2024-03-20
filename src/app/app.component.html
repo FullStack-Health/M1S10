@@ -1,6 +1,7 @@
-<h1>{{ "Oi eu sou o Goku!" | toUppercase }}</h1>
+<h2>Pipes</h2>
+<h2>{{ "Oi eu sou o Goku!" | toUppercase }}</h2>
 <h2>{{ dateNow }}</h2>
-<h2>{{ "12/08/2024" | date :"short" }}</h2>
+<h2>{{ dateNow | date :"short" }}</h2>
 
 <p>=======================================================</p>
 
@@ -16,8 +17,7 @@
   quae, magni pariatur maiores totam debitis mollitia ea?
 </p>
 
-<app-home ></app-home>
-
+<!-- Exemplo de uso do pipe pelo controller -->
 <p>{{title}}</p>
 
 <p>=======================================================</p>

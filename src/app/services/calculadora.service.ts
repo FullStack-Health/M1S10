@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CalculadoraService {
-  //Metodo para o exercício do slide 02 - pag 12
+  //Métodos para o exercício do slide 02 - pag 12
   constructor() { }
 
   somar(num1: number, num2: number){

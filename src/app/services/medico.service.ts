@@ -5,9 +5,10 @@ import { Medico } from '../medico.interface';
   providedIn: 'root'
 })
 export class MedicoService {
-  url:string = "";
+
   constructor() { }
 
+  //Normalmente é no service que você encontra os métodos de CRUD (Create, Read, Update e Delete)
   create(medico: Medico){
 
   }

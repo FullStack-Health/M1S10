@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConversorPipe implements PipeTransform {
 
+  //Pipe usado no exercício
   transform(value: number): string {
     let tempoEmSegundos = value/1000;
     return tempoEmSegundos + "s";
