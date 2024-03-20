@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MedicoService } from '../services/medico.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,13 @@ export class HomeComponent {
     name: "John",
     age: 30,
     email: "",
+  }
+  constructor(private medicoService: MedicoService){
+    
+  }
+
+  ngOnInit(){
+    
   }
 
 }
