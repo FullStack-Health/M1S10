@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { MedicamentosComponent } from './medicamentos/medicamentos.component';
-import { CreateComponent } from './medicamentos/create/create.component';
-import { DetalhamentoComponent } from './medicamentos/detalhamento/detalhamento.component';
+import { AlimentosComponent } from './alimentos/alimentos.component';
+import { CreateComponent } from './alimentos/create/create.component';
+import { DetalhamentoComponent } from './alimentos/detalhamento/detalhamento.component';
 
 export const routes: Routes = [
     {
         path: "",
-        redirectTo: "home",
+        redirectTo: "alimentos",
         pathMatch: "full"
     },
     {
@@ -16,13 +16,13 @@ export const routes: Routes = [
         component: RegisterComponent
     },
     {
-        path: "home",
+        path: "conteudo",
         component: HomeComponent
     },
     {
-        path: "medicamentos",
+        path: "alimentos",
         children: [
-            { path: "", component: MedicamentosComponent },
+            { path: "", component: AlimentosComponent },
             { path: "criar", component: CreateComponent},
             { path: ":identificador", component: DetalhamentoComponent}
         ]
