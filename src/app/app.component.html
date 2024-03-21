@@ -1,33 +1,5 @@
-<h2>Pipes</h2>
-<h2>{{ "Oi eu sou o Goku!" | toUppercase }}</h2>
-<h2>{{ dateNow }}</h2>
-<h2>{{ dateNow | date :"short" }}</h2>
 
-<p>=======================================================</p>
-
-<h2>Exercicio slide 01 - pag 08</h2>
-<h3>{{ 10000 | conversor }}</h3>
-<h3>{{ 20500 | conversor }}</h3>
-
-<p>=======================================================</p>
-<h2>Diretivas personalizadas</h2>
-<p appTester>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium illum,
-  commodi nostrum deserunt quasi ex fugit. Nulla quas quod consectetur saepe
-  quae, magni pariatur maiores totam debitis mollitia ea?
-</p>
-
-<!-- Exemplo de uso do pipe pelo controller -->
-<p>{{title}}</p>
-
-<p>=======================================================</p>
-<h2>Exercicio slide 02 - pag 12</h2>
-<input type="number" [(ngModel)]="numero1">
-<input type="number" [(ngModel)]="numero2">
-<button (click)="calcular()">Calcular</button>
-<ul>
-  <li>Resultado da soma: {{resultSoma}}</li>
-  <li>Resultado da subtração: {{resultSub}}</li>
-  <li>Resultado da divisão: {{resultDiv}}</li>
-  <li>Resultado da multiplicação: {{resultMult}}</li>
-</ul>
+<app-header />
+<div style="border: 1px solid red; padding: 10px;">
+  <router-outlet></router-outlet>
+</div>
