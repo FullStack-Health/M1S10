@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './music-detail.component.css'
 })
 export class MusicDetailComponent {
+  //Código usado no exercício do slide 03 - pag 16
   paramValue: any = 0;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router){}
@@ -17,8 +18,8 @@ export class MusicDetailComponent {
   ngOnInit(){
     console.log(this.router.url);
     this.activatedRoute.params.subscribe((params)=>{
-      console.log(params);
-      this.paramValue = params["id"]; //params.id
+      console.log(params); // { id: [número colocado na rota] }
+      this.paramValue = params["id"]; //params["id"] é como se fosse params.id
     })
   }
 }
