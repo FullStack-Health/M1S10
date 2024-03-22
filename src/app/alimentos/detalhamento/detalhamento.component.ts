@@ -67,18 +67,24 @@ export class DetalhamentoComponent {
     private alimentosService: AlimentosService
   ) {}
 
-  ngOnInit() {
-    console.log(this.activatedRoute);
+  // Toda vez em que eu tenho o entendimento de que irei fazer algo assim 
+  // que o componente inicializar o ideal seria colocar sua implementação no método ngOnInit
+  ngOnInit() { 
+    //as 3 linhas seguintes servem para capturar o parametro chamado 'alimento' na rota 
+    // e armazenar isso na variável alimento
     this.activatedRoute.params.subscribe((parametros) => {
       this.alimento = parametros['alimento'];
     });
 
+
     if (this.alimento != 0) {
+      //Já o método subscribe serve para você executar, dependendo do retorno, uma determinada ação
+      //ele se assemelha muito ao .then das promisses em javascript
       this.alimentosService.getById(this.alimento).subscribe({
-        next: (response)=>{
+        next: (response)=>{ //será executado a função next quando o retorno do this.httpClient der sucesso (status 200 ~ 299)
           console.log(response);
         },
-        error: (err)=>{
+        error: (err)=>{ //será executado a função next quando o retorno do this.httpClient der erro (status 400 ~ 500)
           console.error("Error", err);
         }
       })

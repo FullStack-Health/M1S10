@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { MedicoService } from '../conteudos/services/medico.service';
+import { MedicoService } from '../services/medico.service';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { TesterDirective } from '../conteudos/tester.directive';
-import { ConversorPipe } from '../conteudos/pipes/conversor.pipe';
+import { TesterDirective } from '../tester.directive';
+import { ConversorPipe } from '../pipes/conversor.pipe';
 import { DatePipe } from '@angular/common';
-import { ToUppercasePipe } from '../conteudos/pipes/to-uppercase.pipe';
-import { CalculadoraService } from '../conteudos/services/calculadora.service';
+import { ToUppercasePipe } from '../pipes/to-uppercase.pipe';
+import { CalculadoraService } from '../services/calculadora.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
