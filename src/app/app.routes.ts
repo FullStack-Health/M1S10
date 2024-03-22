@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AlimentosComponent } from './alimentos/alimentos.component';
 import { CreateComponent } from './alimentos/create/create.component';
 import { DetalhamentoComponent } from './alimentos/detalhamento/detalhamento.component';
+import { MusicComponent } from './conteudos/music/music.component';
+import { MusicDetailComponent } from './conteudos/music/music-detail/music-detail.component';
 
 export const routes: Routes = [
     {
@@ -24,7 +26,14 @@ export const routes: Routes = [
         children: [
             { path: "", component: AlimentosComponent },
             { path: "criar", component: CreateComponent},
-            { path: ":identificador", component: DetalhamentoComponent}
+            { path: ":alimento", component: DetalhamentoComponent}
         ]
     },
+    {
+        path: "music",
+        children: [
+            {path: "", component: MusicComponent},
+            {path: ":id", component: MusicDetailComponent}
+        ]
+    }
 ];
