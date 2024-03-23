@@ -2,8 +2,9 @@
 <button class="btn" type="button" (click)="redirectTo()">Criar</button>
 
 <div class="display-flex">
-    <div class="card" *ngFor="let item of alimentos">
-        <img src="https://via.placeholder.com/300" alt="{{item.nome}}">
-        <h3>{{item.nome}}</h3>
+    <div class="card" *ngFor="let item of alimentos" (click)="redirectToDetail(item.name)"> <!--Passo a chave (nome) pelo parametro da função...-->
+        <img src="https://via.placeholder.com/300" alt="{{item.name}}">
+        <h3>{{item.name}}</h3>
+        <p>{{item.calories}}</p>
     </div>
 </div>

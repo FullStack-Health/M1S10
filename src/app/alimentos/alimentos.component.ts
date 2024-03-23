@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlimentosService } from '../services/alimentos.service';
 
 @Component({
   selector: 'app-alimentos',
@@ -10,58 +11,28 @@ import { Router } from '@angular/router';
   styleUrl: './alimentos.component.css',
 })
 export class AlimentosComponent {
-  alimentos = [
-    { 
+  alimentos:any = [];
 
-      id: 1,
-      nome: 'Maçã', 
-      calorias: 52,
-      proteinas: 0.3,
-      gorduras: 0.2,
-      carboidratos: 14,
-      fibra: 2.4
-    },
-    { 
-      id: 2,
-      nome: 'Banana', 
-      calorias: 89,
-      proteinas: 1.3,
-      gorduras: 0.3,
-      carboidratos: 23,
-      fibra: 2.6
-    },
-    { 
-      id: 3,
-      nome: 'Cenoura', 
-      calorias: 41,
-      proteinas: 0.9,
-      gorduras: 0.2,
-      carboidratos: 10,
-      fibra: 2.8
-    },
-    { 
-      id: 4,
-      nome: 'Espinafre', 
-      calorias: 23,
-      proteinas: 2.9,
-      gorduras: 0.4,
-      carboidratos: 3.6,
-      fibra: 2.2
-    },
-    { 
-      id: 5,
-      nome: 'Quinoa', 
-      calorias: 120,
-      proteinas: 4.4,
-      gorduras: 1.9,
-      carboidratos: 21,
-      fibra: 2.8
-    }
-  ];
+  constructor(private alimentosService: AlimentosService, private router: Router){}
 
-  constructor(){}
+  ngOnInit(){
+    this.alimentosService.listAll().subscribe({
+      next: (response)=>{
+        console.log(response);
+        this.alimentos = response;
+      },
+      error: ()=>{
+
+      }
+    })
+  }
 
   redirectTo(){
     
+  }
+
+  redirectToDetail(nome: string){
+    //... Para capturar o nome e concatenar com a url e fazer a chamada detalhada
+    this.router.navigate(["alimentos", nome]);
   }
 }

@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ToUppercasePipe } from './conteudos/pipes/to-uppercase.pipe';
 import { ConversorPipe } from './conteudos/pipes/conversor.pipe';
 import { TesterDirective } from './conteudos/tester.directive';
-import { HomeComponent } from './conteudos/conteudo-page/home.component';
 import { CalculadoraService } from './conteudos/services/calculadora.service';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
